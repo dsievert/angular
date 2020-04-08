@@ -1,0 +1,11 @@
+
+<div class="row" style="color:blue; font-size:20px; text-indent:15px">
+  <label>Filter By Name: </label>
+  <input type="text" [(ngModel)]='filterByName' />  
+</div>
+<mat-card>
+    <h1 mat-card-header>Brewery List</h1>
+      <mat-list>
+        <mat-list-item *ngFor="let brewery of breweries | filterByBreweryName:filterByName ">{{brewery.name}}</mat-list-item>
+      </mat-list>
+</mat-card>
